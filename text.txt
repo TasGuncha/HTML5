@@ -1,0 +1,180 @@
+Contents
+History
+Features
+Markup
+New APIs
+Error handling
+Differences from HTML 4.01 and XHTML 1.x
+Logo
+Code examples
+The Doctype
+The html Element
+The head Element
+HTML5 tutorial
+HTML5
+HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on 28 October 2014 by the World Wide Web Consortium (W3C). This is the fifth revision of the HTML standard since the inception of the World Wide Web. The previous version, HTML 4, was standardized in 1997.
+
+Its core aims are to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers, parsers, etc.). HTML5 is intended to subsume not only HTML 4, but also XHTML 1 and DOM Level 2 HTML.
+
+Following its immediate predecessors HTML 4.01 and XHTML 1.1, HTML5 is a response to the fact that the HTML and XHTML in common use on the World Wide Web have a mixture of features introduced by various specifications, along with those introduced by software products such as web browsers and those established by common practice. It is also an attempt to define a single markup language that can be written in either HTML or XHTML. It includes detailed processing models to encourage more interoperable implementations; it extends, improves and rationalizes the markup available for documents, and introduces markup and application programming interfaces (APIs) for complex web applications. For the same reasons, HTML5 is also a potential candidate for cross-platform mobile applications. Many features of HTML5 have been designed with low-powered devices such as smartphones and tablets taken in to consideration.
+
+History
+The Web Hypertext Application Technology Working Group (WHATWG) began work on the new standard in 2004. At that time, HTML 4.01 had not been updated since 2000, and the World Wide Web Consortium (W3C) was focusing future developments on XHTML 2.0. In 2009, the W3C allowed the XHTML 2.0 Working Group's charter to expire and decided not to renew it. W3C and WHATWG are currently working together on the development of HTML5.
+
+Core HTML specification
+The combined timelines for HTML 5.0, HTML 5.1 and HTML 5.2:
+
+2012	2013	2014	2015	2016
+HTML 5.0	Candidate Rec	Call for Review	Recommendation		
+HTML 5.1	1st Working Draft		Last Call	Candidate Rec	Recommendation
+HTML 5.2				1st Working Draft	
+Features
+Markup
+HTML5 introduces elements and attributes that reflect typical usage on modern websites. Some of them are semantic replacements for common uses of generic block (<div>) and inline (<span>) elements, for example <nav> (website navigation block), <footer> (usually referring to bottom of web page or to last lines of HTML code), or <audio> and <video> instead of <object>. Some deprecated elements from HTML 4.01 have been dropped, including purely presentational elements such as <font> and <center>, whose effects have long been superseded by the more capable Cascading Style Sheets. There is also a renewed emphasis on the importance of DOM scripting (e.g., JavaScript) in Web behavior.
+
+The HTML5 syntax is no longer based on SGML despite the similarity of its markup. It has, however, been designed to be backward compatible with common parsing of older versions of HTML. It comes with a new introductory line that looks like an SGML document type declaration, <!DOCTYPE html>, which triggers the standards-compliant rendering mode. Since 5 January 2009, HTML5 also includes Web Forms 2.0, a previously separate WHATWG specification.
+
+
+New APIs
+In addition to specifying markup, HTML5 specifies scripting application programming interfaces (APIs) that can be used with JavaScript. Existing document object model (DOM) interfaces are extended and de facto features documented. There are also new APIs, such as:
+
+Geolocation
+is used to get the geographical position of a user
+Drag and Drop
+is used to "grab" an object and drag it to a different location
+Local Storage
+can be used by web applications to store data locally within the user's browser
+Application Cache
+is used to make an offline version of a web application
+Web Workers
+is a JavaScript running in the background, without affecting the performance of the page
+Server-Sent Events
+allow a web page to get updates from a server
+Error handling
+HTML5 is designed so that old browsers can safely ignore new HTML5 constructs. In contrast to HTML 4.01, the HTML5 specification gives detailed rules for lexing and parsing, with the intent that compliant browsers will produce the same results when parsing incorrect syntax. Although HTML5 now defines a consistent behavior for "tag soup" documents, those documents are not regarded as conforming to the HTML5 standard.
+
+Differences from HTML 4.01 and XHTML 1.x
+The following is a cursory list of differences and some specific examples.
+
+New parsing rules: oriented towards flexible parsing and compatibility; not based on SGML
+Ability to use inline SVG and MathML in text/html
+New elements:
+embed,
+article,
+aside,
+audio,
+bdi,
+canvas,
+command,
+data,
+datalist,
+details,
+figcaption,
+figure,
+footer,
+header,
+keygen,
+mark,
+meter,
+nav,
+output,
+progress,
+rp,
+rt,
+ruby,
+section,
+source,
+summary,
+time,
+track,
+video,
+wbr
+New types of form controls:
+dates and times,
+email,
+url,
+search,
+number,
+range,
+tel,
+color
+New attributes:
+charset (on meta),
+async (on script)
+Global attributes (that can be applied for every element):
+id,
+tabindex,
+hidden,
+data-* (custom data attributes)
+Deprecated elements will be dropped altogether:
+acronym,
+applet,
+basefont,
+big,
+dir,
+font,
+frame,
+frameset,
+isindex,
+noframes,
+strike,
+tt
+
+Logo
+On 18 January 2011, the W3C introduced a logo to represent the use of or interest in HTML5. Unlike other badges previously issued by the W3C, it does not imply validity or conformance to a certain standard. As of 1 April 2011, this logo is official.
+
+When initially presenting it to the public, the W3C announced the HTML5 logo as a general-purpose visual identity for a broad set of open web technologies, including HTML5, CSS, SVG, WOFF, and others. Some web standard advocates, including The Web Standards Project, criticized that definition of "HTML5" as an umbrella term, pointing out the blurring of terminology and the potential for miscommunication. Three days later, the W3C responded to community feedback and changed the logo's definition, dropping the enumeration of related technologies. The W3C then said the logo represents HTML5, the cornerstone for modern Web applications.
+
+Code Examples
+Let’s start simple, with a bare-bones HTML5 page:
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My web page title</title>
+  <meta name="description" content="My web page">
+  <meta name="author" content="Name Surname">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+</body>
+</html>                    
+Look closely at the above markup.
+
+The Doctype
+First, we have the Document Type Declaration, or doctype. This is simply a way to tell the browser—or any other parsers—what type of document they’re looking at. In the case of HTML files, it means the specific version and flavor of HTML. The doctype should always be the first item at the top of all your HTML files. The doctype declaration for HTML5 is the following:
+
+<!doctype html>                        
+The html Element
+Next up in any HTML document is the html element. In our example, we’ve included the lang attribute with a value of en, which specifies that the document is in English. So here’s what we have so far, including the closing </html> tag:
+
+<!doctype html>
+
+<html lang="en">
+
+</html>                    
+The head Element
+The next part of our page is the <head> section. The first line inside the head is the one that defines the character encoding for the document. HTML5 simplified this by reducing the character encoding <meta> tag to the bare minimum:
+
+<meta charset="utf-8">
+Let's move on to the next part of our document:
+
+<title>My web page title</title>
+<meta name="description" content="My web page">
+<meta name="author" content="Name Surname">
+
+<link rel="stylesheet" href="css/styles.css">
+The page title is declared by the <title> element, and the <meta> tags we’ve included are merely optional examples to indicate where these would be placed; you could put as many meta elements here as you like. The key part of this chunk of markup is the stylesheet, which is included using the customary link element.
+
+HTML5 tutorial
+Before you start working with HTML5, it's worth watching an online tutorial about it. The tutorial was published on Youtube.
+
+
+Credits
+This homework was created by [put your name here] on [put current date and time here].

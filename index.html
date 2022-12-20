@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GS17025</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="sticky-top">
+					<h3><a class="text-dark" href="#html5">Contents</a></h3>
+					<ul class="nav flex-column bg-light">
+						<li class="nav-item">
+							<a class="nav-link active text-dark" href="#history">History</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#features">Features</a>
+							<ul class="nav flex-column pl-3">
+								<li class="nav-item">
+									<a class="nav-link text-secondary" href="#markup">Markup</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-secondary" href="#APIs">New APIs</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-secondary" href="#e_handling">Error handling</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-secondary" href="#differences">Differences from HTML 4.01 and XHTML 1.x</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#logo">Logo</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#c_examples">Code examples</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#doctype">The Doctype</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#html">The html Element</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#head">The head Element</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="#HTML5_tutorial">HTML5 tutorial</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+        <div class="col-md-9">
+			<h1>HTML5</h1>
+			<p class="lead">HTML5 is a <i>markup language</i> used for structuring and presenting content on the World Wide
+			Web. It was finalized, and published, on 28 October 2014 by the <a href="http://www.w3.org/">World Wide Web Consortium</a>
+			(W3C). This is the fifth revision of the HTML standard since the inception of the World Wide Web.
+			The previous version, HTML 4, was standardized in 1997.</p>
+			
+			<p class="text-justify">Its core aims are to improve the language with support for the latest multimedia while keeping it easily readable by
+			humans and consistently understood by computers and devices (web browsers, parsers, etc.). HTML5 is intended to
+			subsume not only HTML 4, but also XHTML 1 and DOM Level 2 HTML.</p>
+			
+			<p class="text-justify">Following its immediate predecessors HTML 4.01 and XHTML 1.1, HTML5 is a response to the fact that the HTML and
+			XHTML in common use on the World Wide Web have a mixture of features introduced by various specifications,
+			along with those introduced by software products such as web browsers and those established by common practice.
+			It is also an attempt to define a single markup language that can be written in either HTML or XHTML. It includes
+			detailed processing models to encourage more interoperable implementations; it extends, improves and rationalizes
+			the markup available for documents, and introduces markup and application programming interfaces (APIs) for
+			complex web applications. For the same reasons, HTML5 is also a potential candidate for cross-platform mobile
+			applications. Many features of HTML5 have been designed with low-powered devices such as smartphones and
+			tablets taken in to consideration.</p>
+			
+			<h2 id="history">History</h2>
+			<p class="text-justify">The <a href="http://whatwg.org/">Web Hypertext Application Technology Working Group</a> (WHATWG) began work on the new standard in 2004. At
+			that time, HTML 4.01 had not been updated since 2000, and the World Wide Web Consortium (W3C) was focusing
+			future developments on XHTML 2.0. In 2009, the W3C allowed the XHTML 2.0 Working Group's charter to expire and
+			decided not to renew it. W3C and WHATWG are currently working together on the development of HTML5.</p>
+			
+			<h4>Core HTML specification</h4>
+			<p>The combined timelines for HTML 5.0, HTML 5.1 and HTML 5.2:</p>
+				<table class="table table-striped">
+                   <thead>
+                    <tr>
+                        <th></th>
+                        <th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>HTML 5.0</td><td>Candidate Rec</td><td>Call for Review</td><td>Recommendation</td><td></td><td></td>
+                    </tr>
+                        
+                    <tr>
+                        <td>HTML 5.1</td><td>1st Working Draft</td><td></td><td>Last Call</td><td>Cadidate Rec</td><td>Recommendation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>HTML 5.2</td><td></td><td></td><td></td><td>1st Working Draft</td><td></td>
+                    </tr>  
+                    </tbody>
+                </table>
+				
+            <h2 id="features">Features</h2>
+            <h4 id="markup">Markup</h4>
+			<p class="text-justify">HTML5 introduces elements and attributes that reflect typical usage on modern websites. Some of them are
+			semantic replacements for common uses of generic block (<code>&lt;div&gt;</code>) and inline (<code>&lt;span&gt;</code>) elements, for example
+			<code>&lt;nav&gt;</code> (website navigation block), <code>&lt;footer&gt;</code> (usually referring to bottom of web page or to last lines of HTML
+			code), or <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> instead of <code>&lt;object&gt;</code>. Some deprecated elements from HTML 4.01 have been
+			dropped, including purely presentational elements such as <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>, whose effects have long been
+			superseded by the more capable Cascading Style Sheets. There is also a renewed emphasis on the importance of
+			DOM scripting (e.g., JavaScript) in Web behavior.</p>
+			
+			<p class="text-justify">The HTML5 syntax is no longer based on SGML despite the similarity of its markup. It has, however, been designed
+			to be backward compatible with common parsing of older versions of HTML. It comes with a new introductory line
+			that looks like an SGML document type declaration, <code>&lt;!DOCTYPE html&gt;</code>, which triggers the standards-compliant
+			rendering mode. Since 5 January 2009, HTML5 also includes Web Forms 2.0, a previously separate WHATWG
+			specification.</p>
+			
+			<h4 id="APIs">New APIs
+            <img align="right" width="310" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HTML5_APIs_and_related_technologies_taxonomy_and_status.svg/420px-HTML5_APIs_and_related_technologies_taxonomy_and_status.svg.png ">
+			</h4>
+			<p class="text-justify">In addition to specifying markup, HTML5 specifies scripting application
+			programming interfaces (APIs) that can be used with JavaScript. Existing 
+			document object model (DOM) interfaces are extended and de facto
+			features documented. There are also new APIs, such as:</p>
+			
+			<dl>
+				<dt>Geolocation</dt>
+				<dd>is used to get the geographical position of a user</dd>
+				<dt>Drag and Drop</dt>
+				<dd>is used to "grab" an object and drag it to a different location</dd>
+				<dt>Local Storage</dt>
+				<dd>can be used by web applications to store data locally within the user's browser</dd>
+				<dt>Application Cache</dt>
+				<dd>is used to make an offline version of a web application</dd>
+				<dt>Web Workers</dt>
+				<dd>is a JavaScript running in the background, without affecting the performance of the page</dd>
+				<dt>Server-Sent Events</dt>
+				<dd>allow a web page to get updates from a server</dd>
+			</dl>
+			
+			<h3 id="e_handling">Error handling</h3>
+			<p class="text-justify">HTML5 is designed so that old browsers can safely ignore new HTML5 constructs. In contrast to HTML 4.01, the
+			HTML5 specification gives detailed rules for lexing and parsing, with the intent that compliant browsers will produce
+			the same results when parsing incorrect syntax. Although HTML5 now defines a consistent behavior for "tag soup"
+			documents, those documents are not regarded as conforming to the HTML5 standard.</p>
+			
+			<h3 id="differences">Differences from HTML 4.01 and XHTML 1.x</h3>
+			<p>The following is a cursory list of differences and some specific examples.</p>
+			<ul>
+				<li>New parsing rules: oriented towards flexible parsing and compatibility; not based on SGML</li>
+				<li>Ability to use inline SVG and MathML in <code>text/html</code></li>
+				<li>New elements:
+					<ul class="row">
+						<div class="col-md-2">
+							<li><code>embed,</code></li>
+							<li><code>article,</code></li>
+							<li><code>aside,</code></li>
+							<li><code>audio,</code></li>
+							<li><code>bdi,</code></li>
+							<li><code>canvas,</code></li>
+							<li><code>command,</code></li>
+							<li><code>data,</code></li>
+							<li><code>datalist,</code></li>
+							<li><code>details,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>figcaption,</code></li>
+							<li><code>figure,</code></li>
+							<li><code>footer,</code></li>
+							<li><code>header,</code></li>
+							<li><code>keygen,</code></li>
+							<li><code>mark,</code></li>
+							<li><code>meter,</code></li>
+							<li><code>nav,</code></li>
+							<li><code>output,</code></li>
+							<li><code>progress,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>rp,</code></li>
+							<li><code>rt,</code></li>
+							<li><code>ruby,</code></li>
+							<li><code>section,</code></li>
+							<li><code>source,</code></li>
+							<li><code>summary,</code></li>
+							<li><code>time,</code></li>
+							<li><code>track,</code></li>
+							<li><code>video,</code></li>
+							<li><code>wbr,</code></li>
+						</div>
+					</ul></li>
+                <li>New types of form controls:
+					<ul class="row">
+						<div class="col-md-2">
+							<li><code>dates and times,</code></li>
+							<li><code>email,</code></li>
+							<li><code>url,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>search,</code></li>
+							<li><code>number,</code></li>
+							<li><code>range,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>tel,</code></li>
+							<li><code>color</code></li> 
+						</div>
+					</ul></li>
+				<li>New attributes:
+					<ul class="row">
+						<div class="col-md-2">
+							<li><code>charset</code><small>(on <code>meta</code>),</small></li>
+							<li><code>async</code><small>(on <code>script</code>)</small></li>
+						</div>
+					</ul></li>
+				<li>Global attributes <small>(that can be applied for every element)</small>:
+					<ul class="row">
+						<div class="col-md-2">
+							<li><code>id,</code></li>
+							<li><code>tabindex,</code></li>
+							<li><code>hidden,</code></li>
+							<li><code>data-*</code><small>(custom data with attributes)</small> </li>
+						</div>
+					</ul></li>
+                <li>Deprecated elements will be dropped altogether:
+					<ul class="row">
+						<div class="col-md-2">
+							<li><code>acronym,</code></li>
+							<li><code>applet,</code></li>
+							<li><code>basefont,</code></li>
+							<li><code>big,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>dir,</code></li>
+							<li><code>font,</code></li>
+							<li><code>frame,</code></li>
+							<li><code>frameset,</code></li>
+						</div>
+						<div class="col-md-2">
+							<li><code>isindex,</code></li>
+							<li><code>noframes,</code></li>
+							<li><code>strike,</code></li>
+							<li><code>tt</code></li>
+						</div>
+					</ul></li>
+			</ul>
+			
+            <h2 id="logo">Logo
+			<img align="right" width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png">
+			
+			</h2>
+            <p class="text-justify">On 18 January 2011, the W3C introduced a logo to represent the use of or interest in HTML5. Unlike
+			other badges previously issued by the W3C, it does not imply validity or conformance to a certain
+			standard. As of 1 April 2011, this logo is official.</p>
+            
+            <p class="text-justify">When initially presenting it to the public, the W3C announced the HTML5 logo as a <q>general-purpose visual identity
+			for a broad set of open web technologies, including HTML5, CSS, SVG, WOFF, and others</q>. Some web standard
+			advocates, including The Web Standards Project, criticized that definition of "HTML5" as an umbrella term, pointing
+			out the blurring of terminology and the potential for miscommunication. Three days later, the W3C responded to
+			community feedback and changed the logo's definition, dropping the enumeration of related technologies. The W3C
+			then said the logo <q>represents HTML5, the cornerstone for modern Web applications</q>.</p>
+			
+            <h2 id="c_examples">Code Examples</h2>
+            <p>Let's start simple, with a bare-bone HTML5 page:</p>
+<pre>&lt;!doctype html&gt;
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+
+&lt;title&gt;My web page title&lt;/title&gt;
+&lt;meta name="description" content="My web page"&gt;
+&lt;meta name="author" content="Name Surname"&gt;
+
+&lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            <p>Look closely at the above markup.</p>
+		
+			<h2 id="doctype">The Doctype</h2>
+			<p class="text-justify">First, we have the Document Type Declaration, or doctype. This is simply a way to tell the browser—or any other
+			parsers—what type of document they’re looking at. In the case of HTML files, it means the specific version and flavor
+			of HTML. The doctype should always be the first item at the top of all your HTML files. The doctype declaration for
+			HTML5 is the following:
+
+			<p><pre>&lt;!doctype html&gt;</pre></p>
+			
+			<h2 id="html">The <code>html</code> Element</h2>
+			<p class="text-justify">Next up in any HTML document is the html element. In our example, we’ve included the lang attribute with a value of
+			en, which specifies that the document is in English. So here’s what we have so far, including the closing <code>&lt;/html&gt;</code>
+			tag:</p>
+
+<pre>&lt;!doctype html&gt;
+
+&lt;html lang="en"&gt;
+
+&lt;/html&gt;</pre>
+			
+			<h2 id="head">The <code>head</code> Element</h2>
+			<p class="text-justify">The next part of our page is the &lt;head&gt; section. The first line inside the head is the one that defines the character
+			encoding for the document. HTML5 simplified this by reducing the character encoding &lt;meta&gt; tag to the bare
+			minimum:</p>
+
+<pre>&lt;meta charset="utf-8"&gt;</pre>
+<p class="text-justify">Let's move on to the next part of our document:</p>
+
+<pre>&lt;title&gt;My web page title&lt;/title&gt;
+&lt;meta name="description" content="My web page"&gt;
+&lt;meta name="author" content="Name Surname"&gt;
+
+&lt;link rel="stylesheet" href="css/styles.css"&gt;</pre>
+			<p class="text-justify">The page title is declared by the <code>&lt;title&gt;</code> element, and the <code>&lt;meta&gt;</code> tags we’ve included are merely optional
+			examples to indicate where these would be placed; you could put as many meta elements here as you like. The key
+			part of this chunk of markup is the stylesheet, which is included using the customary <code>link</code> element.</p>
+
+			<h2 id="HTML5_tutorial">HTML5 tutorial</h2>
+			<p class="text-justify">Before you start working with HTML5, it's worth watching an online tutorial about it. The tutorial was published on 
+			<a href="https://www.youtube.com/watch?v=LqvFIuVlyP8&list=PL41lfR-6DnOruqMacTfff1zrEcqtmm7Fv">Youtube</a>.</p>
+			
+			<div class="embed-responsive embed-responsive-16by9 w-75 mx-auto">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/?listType=playlist&list=PL41lfR-6DnOruqMacTfff1zrEcqtmm7Fv" allowfullscreen></iframe>
+            </div>
+			
+			<hr>
+			<h2>Credits</h2>
+			<p class="text-justify">This homework was created by Guntis Salna (gs17025) on 15.10.2017.
+	</div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch3ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+</html>
